@@ -1,0 +1,4 @@
+[21-Oct-2022 10:06:01 UTC] PHP Notice:  Undefined index: id in /home/assoftie/public_html/en/includes/account.inc.php on line 6
+[21-Oct-2022 10:06:01 UTC] PHP Notice:  Undefined index: email in /home/assoftie/public_html/en/includes/account.inc.php on line 7
+[21-Oct-2022 10:06:01 UTC] PHP Notice:  Undefined index: first_name in /home/assoftie/public_html/en/includes/account.inc.php on line 8
+[21-Oct-2022 10:06:01 UTC] PHP Notice:  Undefined index: last_name in /home/assoftie/public_html/en/includes/account.inc.php on line 9

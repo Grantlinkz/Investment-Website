@@ -1,0 +1,382 @@
+<?php
+    include_once '../includes/account.inc.php';
+?>	
+<!doctype html>
+<html class="no-js"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../favicon.png" rel="icon" type="image/x-icon" />
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+ <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link href="../css/main.css" rel="stylesheet"/>
+<link href="../css/home.css" rel="stylesheet"/>
+<link href="../css/animate.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../css/dataurl.css">
+<link rel="stylesheet" type="text/css" href="../css/iziModal.min.css">
+
+<title>Update Password | Swiftcotradefx</title>
+<link rel="manifest" href="../js/manifest.json">
+<meta name="theme-color" content=" #FF9899">
+<meta name="msapplication-navbutton-color" content=" #FF9899">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content=" #FF9899">
+
+
+<meta name="theme-color" content=" #FF9899">
+<meta name="msapplication-navbutton-color" content=" #FF9899">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content=" #FF9899">
+
+<link href="../favicon.png" rel="icon" type="image/x-icon" />
+<link rel="icon" sizes="192x192" href="../images/icon/icon-192.png">
+
+<meta name="keywords" content="Swiftcotradefx />
+<meta property="og:image" content="../images/icon/icon-310x310.png" />
+
+<meta name="msapplication-square310x310logo" content="../images/icon/icon-310x310.png">
+<meta name="msapplication-square70x70logo" content="../images/icon/icon-70x70.png">
+<meta name="msapplication-square150x150logo" content="../images/icon/icon-150x150.png">
+<meta name="msapplication-wide310x150logo" content="../images/icon/icon-310x150.png">
+
+<link rel="apple-touch-icon-precomposed" href="../images/icon/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../images/icon/apple-touch-icon-57x57
+.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/icon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/icon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/icon/apple-touch-icon-144x144.png" />
+
+
+<meta property="og:site_name" content="Swiftcotradefx | Your Trusted Bitcoin  Mining Company">
+<meta property="og:title" content="Your Trusted Bitcoin  Mining Company" />
+<meta name="description" content="Swiftcotradefx is totally different from its competitors trying to achieve something special starting with the... ">
+<meta property="og:description" content="Swiftcotradefx is totally different from its competitors trying to achieve something special starting with the... ">
+<meta property="og:type" content="website" />
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.form.js"></script>
+<script src="../js/pace.min.js"></script>
+<script>
+var fade_outthis = function() {
+	$(".alert").fadeOut().empty();
+}
+setTimeout(fade_outthis, 8000);
+
+$(document).ready(function(){
+    $(".closebtn").click(function(){
+        $(this).parent().fadeOut().empty();
+    });
+});
+</script>
+</head>
+<body>
+
+<header class="cpanel_header row" id="cpanel_header" style="background-color:white">
+	<ul>
+		<li class="bar"><a id="menu_btn"><i class="fa fa-align-left"></i></a></li>
+		<a href="../BB"><li class="brand"><img src="../BB/assets/images/logoIcon/logo.png" title="Swiftcotradefx | Your Trusted Bitcoin  Mining Company"/></li></a>
+		<li class="user"><a href="#" id="open_account"><i class="fa fa-user"></i></a>
+		</li>
+	</ul>
+</header>
+<div id="account" class="udex-animate-right">
+	<ul>
+		  <li class="title">Account</li>
+                  <li><a href="info.php" style="text-transform: capitalize"><i class="fa fa-user"></i> Welcome, <?php echo $row['first_name'] ." " . $row['last_name']; ?></a></li>
+		<li><a href="BB-security.php"><i class="fa fa-gear"></i> Safety & Security</a></li>
+		<li><a href="changepass.php"><i class="fa fa-lock"></i> Change Password</a></li>
+                <li><a href="../includes/logout.inc.php"><i class="fa fa-power-off"></i> Sign Out</a></li>
+	</ul>
+</div>
+<script>
+$('#open_account').click( function(){
+	$("#account").toggle();
+	$("#main, header, .cpanel_info, .udex_footer").toggleClass("cubic-right");
+	$("body").toggleClass("udex_overflow");
+});
+$("#menu_btn").click( function(){
+	$("#mySidebar").toggle();
+	$("#main, header, .cpanel_info, .udex_footer").toggleClass("cubic-left");
+	$("body").toggleClass("udex_overflow");
+});
+</script>	
+<style rel="modal-content">
+	@media handheld, only screen and (max-width: 700px) {
+		#modal-content{
+			width: 90% !important;
+			max-width: 90% !important;
+			left: 0 !important;
+		}
+	}
+	input, textarea { max-width: 100%; }
+</style>
+
+<style type="text/css">
+#imgArea {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	font-size: 13px;
+	overflow:hidden;
+}
+#imgArea img {
+	outline: medium none;
+	vertical-align: middle;
+	width: 100%;
+}
+#imgContainer {
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+#imgChange input[type="file"] {
+	bottom: 0;
+	cursor: pointer;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+/* Progressbar */
+.progressBar {
+	background: none repeat scroll 0 0 #fff;
+	left: 0;
+	padding: 5px 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: none;
+}
+.progressBar .bar {
+	background-color: #2196f3;
+	width: 0%;
+	height: 18px;
+}
+.progressBar .percent {
+	display: inline-block;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 5px;
+	color: #FFF;
+	width: 100%;
+}
+#imgChange {
+	position: relative;
+}
+</style>
+<div class="default cpanel_info" style="text-transform: capitalize">
+	Welcome, <?php echo $row['first_name'] ." " . $row['last_name']; ?></div>
+<div class="udex-sidebar udex-collapse udex-animate-left" id="mySidebar">
+	<ul class="udex-ul">
+             <li class="header"><a href="account.php"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li ><a href="deposit-fund.php"> <i class="fa fa-inbox"></i> Deposit Funds</a></li>
+                <li ><a href="withdraw-request.php"> <i class="fa fa-money"></i> Withdraw Funds</a></li>
+               <li ><a href="transaction-log.php"> <i class="fa fa-crosshairs"></i> Account History</a></li>
+                <li ><a href="info.php"> <i class="fa fa-gears"></i> Account Profile</a></li>
+                <li ><a href="trading-view.php"> <i class="fa fa-bullseye"></i> Trade View</a></li>
+		<li><a href="../includes/logout.inc.php"> <i class="fa fa-power-off"></i> Logout</a></li>
+                <li><a href="../contact.html"> <i class="fa fa-exclamation-circle"></i> Help</a></li>
+	</ul>
+</div>
+<div class="udex-main" id="main">
+
+    <script src="../js/validation.js"></script>
+    
+<div class="title_container">
+	<ul class="breadcrumb right udex-hidden">
+            <li><a href="account.php"><i class="fa fa-home"></i> Home</a></li>
+  <li class="bold">Change Password</li></ul>
+	<h4>Change Password</h4>
+	<span class="decor_default"></span>
+</div>
+<div class="white section round">
+    <form action="../includes/change-pass.inc.php" method="POST" autocomplete="off" >
+<!--		<input type="hidden" name="pass" value="edit">-->
+    <p>If you notice any suspicious activity, we recommend changing your password.</p>
+    	<div class="row">
+        <div class="col-6 col-m-6 col-sm-12" style="padding: 10px 0">
+			<input type="password" name="oldpass" placeholder="Current Password" value="" style="width:100%" required class="padding round">
+        	<div class="form_hint" id="opass"> Please input your old password!</div>
+        	
+		</div>
+        <div class="col-6 col-m-6 col-sm-12" style="padding: 10px 0">
+			<input type="password" name="newpass" placeholder="New password" style="width:100%"class="padding round">    
+<!--        	<div id="passwordErr" class="form_hint"> Make your password stronger with more letters, at list one numbers</div>-->
+        </div>
+        <div class="col-12 col-m-12 col-sm-12" style="padding: 10px 0">
+        	<input type="submit" value="Submit" name="submit" class="btn padding round default" style="border:0">
+        </div>
+        </div>
+            
+		</form>		
+        </div>
+		<?php
+                        if(isset($_POST['submit'])) {
+						// session_start();
+                        $id=$_SESSION['id'];
+                        $new_psw = mysqli_real_escape_string($conn, $_POST['newpass']);
+                        $sql = "UPDATE user SET psw='$new_psw' WHERE id='$id'";
+                        $query = mysqli_query($conn, $sql);							
+						}
+		?>
+							
+
+</div>	<div class="dash_footer">
+	<p>Copyright © Swiftcotradefx offers a simple and transparent mechanism for attracting  investments and making profits.</p><br>
+	<p>Version 2.0</p>
+	</div>
+</div>
+    
+<script>
+$(document).on('change', '#image_upload_file', function () {
+var progressBar = $('.progressBar'), bar = $('.progressBar .bar'), percent = $('.progressBar .percent');
+
+document.getElementById('myModal').style.display = "none";
+$('#image_upload_form').ajaxForm({
+    beforeSend: function() {
+		progressBar.fadeIn();
+        var percentVal = '0%';
+        bar.width(percentVal)
+        percent.html(percentVal);
+    },
+    uploadProgress: function(event, position, total, percentComplete) {
+        var percentVal = percentComplete + '%';
+        bar.width(percentVal)
+        percent.html(percentVal);
+    },
+    success: function(html, statusText, xhr, $form) {		
+		obj = $.parseJSON(html);	
+		if(obj.status){		
+			var percentVal = '100%';
+			bar.width(percentVal)
+			percent.html(percentVal);
+			$("#imgArea>img").prop('src','https://Swiftcotradefx.com/'+obj.image_small);		
+		} else {
+			alert(obj.error);
+		}
+    },
+	complete: function(xhr) {
+		progressBar.fadeOut();			
+	}	
+}).submit();		
+
+});
+</script>
+<div id="myModal" class="modal padding">
+
+  <!-- Modal content -->
+  <div class="modal-content-small">
+  <div class="modal-body center">
+    <span class="close text-grey">&times;</span><br>
+    <h3>Your profile photo</h3>
+<h6>It is not allowed to publish:</h6><br>
+<div class="danger">
+<ul class="bullet">
+    <li>photos of an explicitly sexual or pornographic nature</li>
+    <li>images aimed at inciting ethnic or racial hatred or aggression</li>
+    <li>photos involving persons under 18 years of age</li>
+    <li>third-party copyright protected photos</li>
+    <li>images larger than 5 MB and in a format other than JPG, GIF or PNG</li>
+</ul></div><br>
+Your face must be clearly visible on the photo.<br>
+All photos and videos uploaded by you must comply with these requirements, otherwise they can be removed.
+</div>
+</div>
+
+</div>
+<div class="udex-overlay" id="myOverlay"></div>
+<ul class="udex_footer">
+	<div class="bodycontainer2" style="max-width: 500px">
+		<li><a href="account.php"><i class="fa fa-home"></i><span>Office</span></a></li>
+		<li><a href="trading-view.php"><i class="fa fa-line-chart"></i><span>Signal</span></a></li>
+		<li><a href="info.php"><i class="fa fa-gears"></i><span>Settings</span></a></li>
+		<li><a href="../includes/logout.inc.php"><i class="fa fa-power-off"></i><span>Logout</span></a></li>
+	</div>
+
+
+
+
+<script src="../js/iziModal.min.js"></script>
+
+
+<script>
+if ($(window).width() > 992) {
+	boxPosition = $(".udex-sidebar").offset().top;
+	$(window).scroll(function(){
+	   var isFixed = $(".udex-sidebar").css("position") === "fixed";
+	   if($(window).scrollTop() > boxPosition && !isFixed){
+				$(".udex-sidebar").css({position:"fixed", top: "0px"});
+	   }else if($(window).scrollTop() < boxPosition){
+			$(".udex-sidebar").css({position:"absolute", top: "auto"});
+	   }
+	});
+}
+</script>
+<script>
+$("#modal-content, #modal-content2, #modal-content3, #modal-content4, #modal-content5, #modal-content6").iziModal({
+        overlayColor: 'rgba(0, 0, 0, 0.8)',
+		iconClass: 'icon-stack',
+        width: 360,
+        padding: 5
+    });
+    $(document).on('click', '.trigger-btc', function (event) {
+        event.preventDefault();
+        $('#modal-content').iziModal('open');
+    });
+    $(document).on('click', '.trigger-eth', function (event) {
+        event.preventDefault();
+        $('#modal-content2').iziModal('open');
+    });
+    $(document).on('click', '.trigger-skr', function (event) {
+        event.preventDefault();
+        $('#modal-content3').iziModal('open');
+    });
+    $(document).on('click', '.trigger-withdraw-btc', function (event) {
+        event.preventDefault();
+        $('#modal-content4').iziModal('open');
+    });
+    $(document).on('click', '.trigger-withdraw-eth', function (event) {
+        event.preventDefault();
+        $('#modal-content5').iziModal('open');
+    });
+    $(document).on('click', '.trigger-withdraw-skr', function (event) {
+        event.preventDefault();
+        $('#modal-content6').iziModal('open');
+    });
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<?php include_once "../includes/tawkto.php" ?>
+</body>
+</html
