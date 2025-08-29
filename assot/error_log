@@ -1,0 +1,4 @@
+[27-Nov-2022 16:35:53 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/spec05264362/public_html/includes/dbh.inc.php on line 8
+[27-Nov-2022 21:23:07 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user '
+spec05264362_Swiftcotradefx'@'cp2.hostsilo.com' (using password: YES) in /home/spec05264362/public_html/includes/dbh.inc.php on line 9
+[27-Nov-2022 23:29:32 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'spec05264362_Swiftcotradefx'@'localhost' (using password: YES) in /home/spec05264362/public_html/includes/dbh.inc.php on line 8
