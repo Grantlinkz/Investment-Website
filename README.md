@@ -42,39 +42,6 @@ Screenshots — "Video Look" gallery (4 per row)
   <img src="Video%20Look/R4.png" alt="R4" style="width:24%;object-fit:cover;">
 </div>
 
-Architecture / Project structure
-The following is a list of top-level files and directories to help you navigate the project:
-
-```
-README.md
-BB-account/
-BB/
-Mail/
-PHPMailer/
-Video Look/
-admin/
-affiliate_program.html
-alert/
-assot-otpMail.php
-assot-registerMail.php
-assot/
-backblue.gif
-cdnjs.cloudflare.com/
-css/
-fade.gif
-favicon.png
-fonts/
-htaccess
-images/
-includes/
-index.php
-info/
-js/
-nbproject/
-slick/
-tawkto.js
-widgets.bitcoin.com/
-```
 
 Contributing
 - Fork, branch, PR — include test steps and screenshots for UI changes.
