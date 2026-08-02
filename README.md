@@ -14,7 +14,7 @@ Key Features
 Tech Stack
 - Frontend: HTML, JavaScript, CSS, SCSS
 - Backend: PHP, Hack
-- Database: MySQL (configure in repo config)
+- Database: MySQL
 
 Getting Started
 1. Clone:
@@ -42,15 +42,10 @@ Screenshots — "Video Look" gallery (4 per row)
   <img src="Video%20Look/R4.png" alt="R4" style="width:24%;object-fit:cover;">
 </div>
 
-Notes
-- Relative image paths assume README at repo root.
-- For better SEO/performance you can link directly to MP4 previews if desired.
 
 Contributing
 - Fork, branch, PR — include test steps and screenshots for UI changes.
 
-License
-- Add your license here.
 
 Contact
-- Maintainer: Grantlinkz — https://github.com/Grantlinkz
+- Developer: Grantlinkz — https://github.com/Grantlinkz
